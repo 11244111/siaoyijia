@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11244111蕭儀佳</title>
+    <style>
+        h1{
+            font-family: 標楷體;
+            font-style: italic;
+            color: blue;
+            text-align: center;
+        }
+        th{
+            font-weight: bolder;
+            font-size: 20px;
+            background-color: #84C1FF;
+        }
+        .title_1{
+            font-weight: bold;
+            background-color: #ECF5FF;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>春季旅遊活動報名表</h1>
+    <table border="1">
+        <tr>
+            <th colspan="4">欲報名的活動梯次</th>
+        </tr>
+        <tr>
+            <td>
+                <img src="photos/event1.jpg" width="300px" height="200px"><br>
+                <input type="radio" name="" value="走春賞葉之旅:04/06(六)">走春賞葉之旅:04/06(六)
+            </td>
+            <td>
+                <img src="photos/event2.jpg" width="300px" height="200px"><br>
+                <input type="radio" name="" value="森林探險之旅:04/06(六)">森林探險之旅:04/13(六)
+            </td>
+            <td>
+                <img src="photos/event3.jpg" width="300px" height="200px"><br>
+                <input type="radio" name="" value="草原生態之旅:04/06(六)">草原生態之旅:04/13(六)
+            </td>
+            <td>
+                <img src="photos/event4.jpg" width="300px" height="200px"><br>
+                <input type="radio" name="" value="探索星空之旅:04/06(六)">探索星空之旅:04/13(六)
+            </td>
+        </tr>
+        <tr>
+            <th colspan="4">報名者個人資料</th>
+        </tr>
+        <tr>
+            <td class="title_1">姓名</td>
+            <td><input type="text" name="user_name" size="20"></td>
+            <td class="title_1">性別</td>
+            <td>
+                <input type="radio" name="sex" value="男生">男生
+                <input type="radio" name="sex" value="女生">女生
+            </td>
+        </tr>
+        <tr>
+            <td class="title_1">身分證字號</td>
+            <td><input type="text" size="10"></td>
+            <td class="title_1">出生年月日</td>
+            <td><input type="date" name=""></td>
+        </tr>
+        <tr>
+            <td class="title_1">聯絡電話</td>
+            <td><input type="text" size="10"></td>
+            <td class="title_1">聯絡e-mail</td>
+            <td><input type="email" name="email" size="30"></td>
+        </tr>
+        <tr>
+            <td class="title_1">飲食習慣(複選)</td>
+            <td colspan="4">
+                <input type="checkbox" name="food" value="葷食">葷食
+                <input type="checkbox" name="food" value="素食">素食
+                <input type="checkbox" name="food" value="奶蛋素">奶蛋素
+                <input type="checkbox" name="food" value="其他飲食習慣">其他飲食習慣
+            </td>
+        </tr>
+        <tr>
+            <td class="title_1">健康狀況(複選)</td>
+            <td colspan="4">
+                <input type="checkbox" name="health" value="氣喘">氣喘
+                <input type="checkbox" name="health" value="高山症">高山症
+                <input type="checkbox" name="health" value="懼高症">懼高症
+                <input type="checkbox" name="health" value="心臟病">心臟病
+                <input type="checkbox" name="health" value="高血壓">高血壓
+                <input type="checkbox" name="health" value="糖尿病">糖尿病
+                <input type="checkbox" name="health" value="其他病症">其他病症
+
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="5" class="title_1">備註</td>
+            <td colspan="4" rowspan="5"><textarea name="" cols="100"></textarea></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <th colspan="4" class="title_1">緊急聯絡人</th>
+        </tr>
+        <tr>
+            <td class="title_1">姓名</td>
+            <td><input type="text" name="user_name2" size="20"></td>
+            <td class="title_1">聯絡電話</td>
+            <td><input type="text" size="10"></td>
+        </tr>
+        <tr>
+            <td class="title_1">聯絡地址</td>
+            <td colspan="4">
+                <select name="address">
+                    <option value="台北市">台北市</option>
+                    <option value="新北市">新北市</option>
+                    <option value="桃園市">桃園市</option>
+                    <option value="台中市">台中市</option>
+                    <option value="高雄市">高雄市</option>
+                </select>
+                <input type="text" size="100">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="送出">
+    <input type="reset" value="清除">
+</body>
+</html>
