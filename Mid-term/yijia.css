@@ -1,0 +1,244 @@
+/* 背景顏色 */
+body{
+    background-color: #97b0e3;
+}
+
+/* Header的CSS */
+header {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    background-color: #fffaaa;
+    padding: 20px;
+    border:#ffd2ab 40px solid;
+    border-radius: 40px; /* 基本圓角 */
+    align-items: center;
+    flex-wrap: wrap;
+}
+header section {
+    display: flex;
+    align-items: center;
+}
+/* Header的font的CSS */
+header h1 {
+    font-size: 2cm; /* 調整 h1 的字體大小 */
+}
+header h2 {
+    font-size: 1cm; /* 調整 h2 的字體大小 */
+}
+
+main section {
+    max-width: 600px;
+    margin:  50px;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 大頭貼的CSS */
+.myphoto{
+    max-width: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+} 
+
+/* 座右銘的CSS */
+.motto{
+    text-align: center;
+    font-size: 30px;
+    font-family:'標楷體';
+    color: #01319d;
+}
+
+/* 分隔線的CSS */
+.divider {
+    height: 20px; /* 控制分隔線的高度 */
+    width: 90%; /* 分隔線的寬度 */
+    margin: 50px auto; /* 讓分隔線水平居中 */
+    background: repeating-linear-gradient(
+        90deg,         /* 水平排列 */
+        #004d8d,       /* 方格顏色 */
+        20px,  /* 每個方格的寬度 */
+        transparent 10px,
+        transparent 40px /* 方格之間的間距 */
+    );
+}
+
+/* nav的CSS */
+nav {
+    display: flex; /* 使用 Flexbox 將按鈕排列在同一行 */
+    justify-content: center; /* 水平居中對齊 */
+    gap: 50px; /* 按鈕之間的間距 */
+    margin: 40px; /* 整體上下邊距 */
+    flex-wrap: wrap; /* 讓按鈕在寬度不夠時自動換行 */
+}
+
+/* nav的按鈕的CSS */
+.custom-button {
+    padding: 15px 30px; /* 加大按鈕內部的間距 */
+    font-size: 40px; /* 字體大小增大 */
+    color: black; /* 字體顏色 */
+    background: pink;
+    border:15px solid rgb(208, 74, 97); 
+    border-radius: 30px; /* 圓角 */
+    cursor: pointer; /* 滑鼠懸停時顯示指針 */
+    text-decoration: none; /* 移除連結的下劃線 */
+    transition: background 0.3s ease; /* 加入過渡效果 */
+}
+/* 滑鼠懸停效果 */
+.custom-button:hover {
+    background: #ff87c3; /* 改變背景顏色 */
+}
+
+/* 返回按鈕的CSS */
+.back-button {
+    position: absolute; /* 絕對定位 */
+    bottom: 20px; /* 距離底部 20px */
+    right: 20px; /* 距離右側 20px */
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+    background-color: pink;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* 滑鼠懸停效果 */
+.back-button:hover {
+    background-color: #ff87c3;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 15px;
+    display: flex; /* 使用 Flexbox */
+    align-items: center; /* 垂直居中 */
+    gap: 20px; /* 控制圖片和文字的間距 */
+}
+.card img {
+    max-width: 200px; /* 限制圖片的寬度 */
+    border-radius: 10px; /* 圓角效果 */
+}
+.card p {
+    margin: 0; /* 移除段落預設的外邊距 */
+    color: #01319d;
+    font-weight: bolder;
+}
+.card h2 {
+    position: absolute; /* 固定位置在卡片左上角 */
+    top: 20px;
+    left: 20px;
+    font-size: 2em; /* 字體增大 */
+    color: #01319d; /* 可以調整顏色 */
+    margin: 0; /* 移除預設外邊距 */
+}
+
+article#About {
+    position: relative; /* 讓標題可以相對於 About 區塊定位 */
+}
+.about-image {
+    max-width: 200px;
+    border-radius: 5%;
+    margin: 30px 100px;
+}
+
+.skill {
+    display: flex; /* 使用 flexbox */
+    flex-direction: column; /* 垂直排列內容 */
+    align-items: center; /* 水平置中 */
+    text-align: center;
+    justify-content: center; /* 垂直置中 */
+    padding: 20px; /* 添加內邊距 */
+}
+/* Skills 區塊內部技能容器 */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap; /* 允許技能項目換行 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    text-align: center;
+    gap: 30px; /* 控制技能之間的間距 */
+    margin-top: 20px; /* 可選：增加與上方的距離 */
+}
+.circle {
+    --circle-size: 100px;
+    --circle-color: #87CEEB; /* 背景色 */
+    --fill-color: #ff87c3;   /* 填充色 */
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--fill-color) calc(var(--percentage) * 1%), 
+        var(--circle-color) 0
+    );
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: black;
+}
+.circle::before {
+    content: attr(data-percentage) "%";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--circle-size) - 45px); /* 縮小圓心內部的顏色 */
+    height: calc(var(--circle-size) - 45px);
+    border-radius: 50%;
+    background-color: white; /* 圓心內部顏色 */
+    font-size: 1em;
+    color: black;
+}
+.skill-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #01319d; /* 調整文字顏色 */
+}
+
+footer {
+    position: relative;
+    padding: 0px;
+    text-align: center;
+}
+.social-media {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+.social-media-container h3 {
+    font-size: 5em; /* 放大字體 */
+    margin-bottom: 10px; /* 與圖標保持距離 */
+    color: #01319d;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* 改為垂直排列 */
+        text-align: center;
+    }
+
+    header section {
+        flex-direction: column; /* 文字和照片垂直排列 */
+        align-items: center;
+    }
+    nav {
+        flex-direction: column; /* 改為垂直排列 */
+        align-items: center;
+    }
+
+    .custom-button {
+        font-size: 30px; /* 字體稍微縮小 */
+        padding: 10px 20px; /* 減小內部間距 */
+    }
+}
