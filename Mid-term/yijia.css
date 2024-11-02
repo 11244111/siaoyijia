@@ -20,7 +20,7 @@ header section {
 }
 /* Header的font的CSS */
 header h1 {
-    font-size: 2cm; /* 調整 h1 的字體大小 */
+    font-size: 1cm; /* 調整 h1 的字體大小 */
 }
 header h2 {
     font-size: 1cm; /* 調整 h2 的字體大小 */

@@ -1,0 +1,23 @@
+html {
+    scroll-behavior: smooth;
+    display: block;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #F7EBDA;
+    margin: 0px;
+}
+header {
+    background-color: #D1BB9E;
+    color: #82725D;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Times New Roman';
+    margin: 0px;
+    padding: 40px;
+    display: block;
+    unicode-bidi: isolate;
+}

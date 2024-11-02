@@ -1,0 +1,330 @@
+html {
+    scroll-behavior: smooth; /*設定 HTML 元素滾動行為為平滑*/
+    display: block; /*保持文檔流結構*/
+}
+
+/*設定所有元素的邊框計算方式，使元素內部邊距不影響寬度*/
+* {
+    box-sizing: border-box;
+}
+
+/*頁面設定*/
+body {
+    padding-top: 110px;
+    background-color: #FADBD8; /*背景顏色*/
+    margin: 0px; /*清除預設邊距*/
+}
+
+/*頁首設置*/
+header {
+    background-color: #D7BDE2; /*設定頁首背景顏色為淡紫色*/
+    color: #8658a2; /*設定文字顏色為深紫色*/
+    font-size: 40px; /*設定文字大小為40像素*/
+    padding: 20px 20px; /*設定頁首內距，上下40px，左右30px*/
+    display: flex; /*使用彈性盒子模型排版*/
+    align-items: center; /*將內容垂直置中*/
+    justify-content: space-between; /*兩端對齊，將元素分布在左右兩側*/
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /*添加陰影效果，使頁首稍微浮起*/
+    position: fixed; /*固定頁首位置，讓它隨頁面滾動固定在頂部*/
+    top: 0; /*固定於頁面頂部*/
+    width: 100%; /*設置頁首寬度為100%，覆蓋整個螢幕寬度*/
+    z-index: 500; /*設定頁首層級，確保在其他元素上方*/
+}
+
+/*導航區域設置*/
+nav {
+    text-align: center; /*導航區域文字置中*/
+    display: block;
+    unicode-bidi: isolate; /*使 nav 元素不受其他文本方向影響*/
+}
+
+/* 導航連結樣式*/
+nav a{
+    background-color: #cec4f9; /*背景色*/
+    border-radius: 100px; /*圓角設計*/
+    border: 5px solid transparent; /*無邊框，但可適當調整*/
+    color: #8c338f; /*字體顏色*/
+    font-family: 'Times New Roman'; /*字體*/
+    font-size: 20px; /*字體大小*/
+    font-weight: bold; /*字體加粗*/
+    padding: 10px 30px; /*上下內邊距20px，左右40px*/
+    margin: 10px 10px; /*間距防止擁擠*/
+    display: inline-block;
+    text-decoration: none; /*移除下劃線*/
+}
+
+/*基本區塊樣式*/
+article, section, div{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/*區段設置*/
+.section1 {
+    width: 1000px;
+    height: 600px;
+    background-color: #FFF7ED; 
+    border-radius: 30px;
+    border: 50px;
+    padding: 40px 40px; /*增加內邊距，避免內容擁擠*/
+    margin: 50px auto; /*置中區塊*/
+}
+.section2 {
+    width: 1000px;
+    height: 2950px;
+    background-color: #FFF7ED;
+    border-radius: 30px;
+    border: 50px;
+    padding: 40px 40px;
+    margin: 50px auto;
+}
+.section3 {
+    width: 1000px;
+    height: 1500px;
+    background-color: #FFF7ED;
+    border-radius: 30px;
+    border: 50px;
+    padding: 40px 40px;
+    margin: 50px auto;
+}
+.section4 {
+    width: 1000px;
+    height: 1130px;
+    background-color: #FFF7ED;
+    border-radius: 30px;
+    border: 50px;
+    padding: 40px 40px;
+    margin: 50px auto;
+}
+
+/* 個人照設置*/
+.my_photo {
+    float: left;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: #82725D;
+    padding: 30px 30px; /*確保圖片與其他內容之間有距離*/
+}
+.me{
+    border: #f4d3f5 10px solid;
+}
+
+/*設定圖片的裁剪行為和溢出*/
+img {
+    overflow-clip-margin: content-box; /*內部裁剪範圍*/
+    overflow: clip; /*防止內容超出邊框*/
+}
+
+/*段落的基本顯示設置*/
+p {
+    display: block;
+    margin-block-start: 1em; /*上下邊距*/
+    margin-block-end: 1em;
+    unicode-bidi: isolate; /*確保段落文本方向保持一致*/
+}
+
+/*個人資料樣式，字體顏色及位置*/
+.my_profile {
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 23px;
+    text-align: left;
+    color: #82725D;
+    padding: 30px auto; /*確保左對齊效果*/
+}
+
+/* 技能區塊排版，使用彈性佈局置中排列 */
+.all_skills_display {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+/*環形進度條設置，動態呈現進度百分比*/
+.pie.ani {
+    animation-name: pieAni;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.pie {
+    width: 150px;
+    aspect-ratio: 1; /*確保正方形*/
+    display: inline-grid;
+    place-content: center;
+    margin: 5px;
+    font-size: 20px; /*環形內文字*/
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    color: #82725D;
+    position: relative;
+}
+.pie::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%; /*確保環形*/
+    inset: 0;
+    background: conic-gradient(var(--color) calc(var(--percentage)* 1%), #0000 0%), #FADADD;
+    -webkit-mask-image: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 calc(100% - 10px));
+    mask-image: radial-gradient(farthest-side, #0000 calc(75% - 10px), #000 calc(75% - 10px));
+}
+@property --percentage{
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+@keyframes pieAni{
+    from {
+      --percentage: 0;
+    }
+}
+
+/*技能進度條分隔線設置*/
+.v_line {
+    border-right: thick solid #D1BB9E;
+    height: 400px;
+    left: 50%;
+}
+
+/* 進度條內部設置，對齊方式 */
+.progress_display {
+    align-content: space-around;
+    margin: 0px;
+    padding-left: 20px;
+}
+
+/* 基礎進度條設置，呈現未填充區域 */
+.pro {
+    border-radius: 30px;
+    width: 350px;
+    height: 30px;
+    border: #FADADD;
+    background-color: #FADADD;
+}
+
+.probar1 {
+    height: 30px;
+    border-radius: 15px;
+    transition-property: width;
+}
+.probar2 {
+    height: 30px;
+    border-radius: 15px;
+    transition-property: width;
+}
+.probar3 {
+    height: 30px;
+    border-radius: 15px;
+    transition-property: width;
+}
+
+/* 每個進度條的動畫效果 */
+.progress-moved .probar1 {
+    width: 92%;
+    background-color: #FDBCB4;
+    animation: progressAni1 5s;
+    animation-iteration-count: infinite;
+}
+.progress-moved .probar2 {
+    width: 96%;
+    background-color: #FDBCB4;
+    animation: progressAni2 5s;
+    animation-iteration-count: infinite;
+}
+.progress-moved .probar3 {
+    width: 98%;
+    background-color: #FDBCB4;
+    animation: progressAni3 5s;
+    animation-iteration-count: infinite;
+}
+
+/*進度條動畫效果*/
+@keyframes progressAni1 {
+    0% {width: 5%; background-color: #FADADD;}
+    100% {width: 92%; background-color: #FDBCB4;}
+}
+@keyframes progressAni2 {
+    0% {
+      width: 5%;
+      background-color: #FADADD;
+    }
+    100% {
+      width: 96%;
+      background-color: #FDBCB4;
+    }
+}
+@keyframes progressAni3 {
+    0% {
+      width: 5%;
+      background-color: #FADADD;
+    }
+    100% {
+      width: 98%;
+      background-color: #FDBCB4;
+    }
+}S
+
+/*文字樣式*/
+h2 {
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    text-align: center;
+    color: #82725D;
+    padding: auto;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.txt {
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: #82725D;
+}
+.txt1 {
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    color: #82725D;
+}
+.txt2 {
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    line-height: 40px;
+    color: #82725D;
+    padding: auto;
+}
+
+/*照片設定*/
+.picleft {
+    float: left;
+    margin: 0px;
+    padding-right: 30px;
+}
+.picright {
+    float: right;
+    margin: 0px;
+    padding-left: 30px;
+}
+
+/*頁腳設定*/
+footer {
+    background-color: #D7BDE2;
+    color: #8658a2;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    unicode-bidi: isolate;
+}
