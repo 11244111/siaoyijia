@@ -327,4 +327,5 @@ footer {
     padding: 10px;
     display: block;
     unicode-bidi: isolate;
+    width: 100%; /*設置頁首寬度為100%，覆蓋整個螢幕寬度*/
 }
