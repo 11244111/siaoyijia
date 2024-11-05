@@ -318,6 +318,12 @@ h2 {
     margin: 0px;
     padding-left: 30px;
 }
+/* 為所有圖片增加放大效果，排除個人照 */
+img:not(.me):hover {
+    box-shadow: 10px 10px 15px #685a47;/* 陰影效果 */
+    transform: scale(1.1); /* 放大比例 */
+    transition: transform 0.3s ease; /* 過渡效果 */
+}
 
 /*頁腳設定*/
 footer {
